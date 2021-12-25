@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="book.png">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/7775c06804.js" crossorigin="anonymous"></script>
+    <title>Library</title>
+</head>
+<body>
+    <header><h1>My Library</h1></header>
+    <div class="container">
+        <div class="cards"></div>
+        <div class="add-new">
+            <form id="form">
+                <h2>Add new book</h2>
+                <input type="text" id="title" name="title" placeholder="Title" required>
+                <input type="text" id="author" name="author" placeholder="Author" required>
+                <input type="text" id="genre" name="genre" placeholder="Genre" required>
+                <input type="number" id="pages" name="pages" placeholder="Pages" required>
+                <div class="toggle">
+                    <p class="read">Have you read this book?</p>
+                    <label class="switch">
+                        <input type="checkbox" id="status">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <button type="submit" form="form" value="Submit" class="button-24" id="form-button">Add to library</button> 
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2021 ivane-k<i class="fab fa-github"></i></p>
+    </footer>
+</body>
+</html>
