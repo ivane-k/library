@@ -5,6 +5,17 @@ const cards = document.querySelector('.cards')
 // array to store Book objects
 let myLibrary = [];
 
+// create class for Book objects
+class Book {
+  constructor(title, author, genre, pages, status) {
+    this.title = title
+    this.author = author
+    this.genre = genre
+    this.pages = pages
+    this.status = status
+  }
+}
+
 // add event listeners to different buttons
 // call addBook function when "Add to library" button is clicked
 form.addEventListener('submit', addBook)
@@ -43,7 +54,7 @@ function addBook(e) {
   else 
   status = 'Not Read'
   // create new Book object
-  let newBook = new Book(title, author, genre, pages, status)
+  const newBook = new Book(title, author, genre, pages, status)
   // add new object to myLibrary array
   myLibrary.push(newBook)
   // call other functions
@@ -51,14 +62,6 @@ function addBook(e) {
   clearValues()
 }
 
-// create constructor for Book objects
-function Book(title, author, genre, pages, status) {
-  this.title = title
-  this.author = author
-  this.genre = genre
-  this.pages = pages
-  this.status = status
-}
 
 // clear input fields after submitting
 function clearValues() {
